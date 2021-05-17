@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loginui/shared/accountform.dart';
+import 'package:loginui/shared/FormScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: Colors.teal,
           title: Text('Admin App',
               style: TextStyle(
                   color: Colors.white,
@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       "Welcome ",
                       style: TextStyle(
-                        color: Colors.blue,
+                        color: Colors.teal,
                         fontWeight: FontWeight.bold,
                         fontSize: 25,
                       ),
@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       'To',
                       style: TextStyle(
                           fontSize: 25,
-                          color: Colors.blue,
+                          color: Colors.teal,
                           fontWeight: FontWeight.bold),
                     )),
                 Container(
@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       'Question24x7',
                       style: TextStyle(
                           fontSize: 25,
-                          color: Colors.blue,
+                          color: Colors.teal,
                           fontWeight: FontWeight.bold),
                     )),
                 Container(
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       'Sign in',
                       style: TextStyle(
                           fontSize: 20,
-                          color: Colors.blue,
+                          color: Colors.teal,
                           fontWeight: FontWeight.bold),
                     )),
                 Container(
@@ -100,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {},
                   child: Text(
                     'Forgot Password',
-                    style: TextStyle(color: Colors.blue, fontSize: 18),
+                    style: TextStyle(color: Colors.teal, fontSize: 18),
                   ),
                 ),
                 Container(
@@ -109,10 +109,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                     margin: EdgeInsets.only(bottom: 10),
                     child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.teal)),
                       child: Text(
                         'Login',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 18),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.white),
                       ),
                       onPressed: () {},
                     )),
@@ -130,11 +135,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Text(
                         'Sign in',
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.teal),
                       ),
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (cntxt) => AccountForm()));
+                            builder: (cntxt) => FormScreen()));
                       },
                     )
                   ],
